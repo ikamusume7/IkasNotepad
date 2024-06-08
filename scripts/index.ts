@@ -1,6 +1,7 @@
 // https://vitepress.dev/guide/custom-theme
 import { h, onMounted } from "vue";
 import type { Theme } from "vitepress";
+import { useData, useRoute } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 
 import "./styles/style.css";
@@ -10,6 +11,8 @@ import "@nolebase/vitepress-plugin-highlight-targeted-heading/client/style.css";
 import "overlayscrollbars/overlayscrollbars.css";
 import "vitepress-markdown-timeline/dist/theme/index.css";
 import "@shikijs/vitepress-twoslash/style.css";
+import "vitepress-plugin-sandpack/dist/style.css";
+import "vitepress-plugin-codeblocks-fold/style/index.css";
 
 import Layout from "./components/Layout.vue";
 
@@ -18,6 +21,14 @@ import { NolebaseInlineLinkPreviewPlugin } from "@nolebase/vitepress-plugin-inli
 import { OverlayScrollbars } from "overlayscrollbars";
 
 import TwoslashFloatingVue from "@shikijs/vitepress-twoslash/client";
+
+import { enhanceAppWithTabs } from "vitepress-plugin-tabs/client";
+
+import { Sandbox } from "vitepress-plugin-sandpack";
+
+import codeblocksFold from "vitepress-plugin-codeblocks-fold";
+
+import { NolebaseGitChangelogPlugin } from "@nolebase/vitepress-plugin-git-changelog/client";
 
 export default {
   extends: DefaultTheme,
@@ -36,12 +47,21 @@ export default {
   enhanceApp({ app, router, siteData }) {
     app.use(NolebaseInlineLinkPreviewPlugin);
     app.use(TwoslashFloatingVue);
+    enhanceAppWithTabs(app);
+    app.component("Sandbox", Sandbox);
+    app.use(NolebaseGitChangelogPlugin);
   },
   setup() {
     onMounted(() => {
       OverlayScrollbars(document.body, {
         // scrollbars: { theme: "os-theme-dark" },
       });
+
+      // get frontmatter and route
+      const { frontmatter } = useData();
+      const route = useRoute();
+      // basic use
+      codeblocksFold({ route, frontmatter }, false, 400);
     });
   },
 } satisfies Theme;

@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "伊卡的笔记仓库"
-  text: "我的学习笔记存放处"
+  # text: "学习笔记存放处"
   tagline: 学无止境
   actions:
     - theme: brand
