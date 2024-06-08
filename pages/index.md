@@ -2,6 +2,9 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
+title: 伊卡的记事本
+titleTemplate: ":title"
+
 hero:
   name: "Ika's Notepad"
   text: "伊卡的记事本"
