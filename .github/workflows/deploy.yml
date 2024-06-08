@@ -24,8 +24,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # 构建工作
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -62,18 +61,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: .vitepress/dist
-
-  publish:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      deployments: write
-    name: Publish to Cloudflare Pages
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      # Run a build step here if your project requires
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
