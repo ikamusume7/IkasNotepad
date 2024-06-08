@@ -9,8 +9,8 @@
     <template #nav-screen-content-after>
       <NolebaseEnhancedReadabilitiesScreenMenu />
     </template>
-    <template #doc-footer-before
-      ><div :key="title" class="giscus">
+    <template #doc-after>
+      <div :key="title" class="giscus">
         <Giscus
           repo="ikamusume7/MyNotes"
           repoId="R_kgDOMGWs2w"

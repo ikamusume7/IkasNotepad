@@ -9,6 +9,10 @@ import {
   GitChangelog,
   GitChangelogMarkdownSection,
 } from "@nolebase/vitepress-plugin-git-changelog/vite";
+import {
+  chineseSearchOptimize,
+  pagefindPlugin,
+} from "vitepress-plugin-pagefind";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -18,7 +22,7 @@ export default defineConfig({
   lang: "zh-CN",
   cleanUrls: true,
   srcDir: "./pages",
-  lastUpdated: true,
+  // lastUpdated: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [{ text: "首页", link: "/" }],
@@ -61,6 +65,14 @@ export default defineConfig({
         repoURL: () => "https://github.com/ikamusume7/MyNotes",
       }),
       GitChangelogMarkdownSection(),
+      pagefindPlugin({
+        customSearchQuery: chineseSearchOptimize,
+        btnPlaceholder: "搜索",
+        placeholder: "搜索笔记",
+        emptyText: "空空如也",
+        heading: "共: {{searchResult}} 条结果",
+        excludeSelector: ["img", "a.header-anchor"],
+      }),
     ],
     optimizeDeps: {
       exclude: ["@nolebase/vitepress-plugin-enhanced-readabilities/client"],
