@@ -8,6 +8,10 @@
 
 本站头像中的人物名为シオン（译：诗音），出自日本 Galgame 作品[《eden\*》](https://zh.wikipedia.org/wiki/Eden*)。
 
+## 本站图标
+
+本站[羽毛笔](https://icons8.com/icon/hGBTBdUownyO/%E7%BE%BD%E6%AF%9B%E7%AC%94) 图标来自[Icons8](https://icons8.com)
+
 ## 关于我
 
 宅男
