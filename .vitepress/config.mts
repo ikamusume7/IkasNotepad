@@ -33,7 +33,7 @@ export default defineConfig({
     ],
   },
   markdown: {
-    codeTransformers: [transformerTwoslash()],
+    // codeTransformers: [transformerTwoslash()],
     config(md) {
       // 其他 markdown-it 配置...
       // @ts-expect-error unmatched type for VitePress, ref https://github.com/nolebase/integrations/pull/228 [!code ++]
@@ -50,6 +50,8 @@ export default defineConfig({
         // 如果还有别的依赖需要添加的话，并排填写和配置到这里即可
         "@nolebase/vitepress-plugin-enhanced-readabilities",
         "@nolebase/vitepress-plugin-highlight-targeted-heading",
+        "@nolebase/vitepress-plugin-inline-link-preview",
+        "@nolebase/ui",
       ],
     },
   },

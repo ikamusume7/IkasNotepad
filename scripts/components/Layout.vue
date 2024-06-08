@@ -1,4 +1,4 @@
-<template setup>
+<template>
   <Layout>
     <template #layout-top>
       <NolebaseHighlightTargetedHeading />
@@ -12,7 +12,7 @@
   </Layout>
 </template>
 
-<script>
+<script setup lang="ts">
 import DefaultTheme from "vitepress/theme";
 
 import {
