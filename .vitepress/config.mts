@@ -40,6 +40,9 @@ export default defineConfig({
     socialLinks: [
       { icon: "github", link: "https://github.com/ikamusume7/MyNotes" },
     ],
+    search: {
+      provider: "local",
+    },
   },
   markdown: {
     codeTransformers: [transformerTwoslash()],
@@ -65,14 +68,14 @@ export default defineConfig({
         repoURL: () => "https://github.com/ikamusume7/MyNotes",
       }),
       GitChangelogMarkdownSection(),
-      pagefindPlugin({
-        customSearchQuery: chineseSearchOptimize,
-        btnPlaceholder: "搜索",
-        placeholder: "搜索笔记",
-        emptyText: "空空如也",
-        heading: "共: {{searchResult}} 条结果",
-        excludeSelector: ["img", "a.header-anchor"],
-      }),
+      // pagefindPlugin({
+      //   customSearchQuery: chineseSearchOptimize,
+      //   btnPlaceholder: "搜索",
+      //   placeholder: "搜索笔记",
+      //   emptyText: "空空如也",
+      //   heading: "共: {{searchResult}} 条结果",
+      //   excludeSelector: ["img", "a.header-anchor"],
+      // }),
     ],
     optimizeDeps: {
       exclude: ["@nolebase/vitepress-plugin-enhanced-readabilities/client"],
