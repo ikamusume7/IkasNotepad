@@ -15,14 +15,16 @@ import {
 } from "vitepress-plugin-pagefind";
 import { PageProperties } from "@nolebase/vitepress-plugin-page-properties/vite";
 
+import { BiDirectionalLinks } from "@nolebase/markdown-it-bi-directional-links";
+
 import AutoNav from "vite-plugin-vitepress-auto-nav";
 import VitePressPluginAutoNavSidebar from "vitepress-plugin-auto-nav-sidebar";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "伊卡的笔记仓库",
-  titleTemplate: ":title - 伊卡的笔记仓库",
-  description: "My notes collection",
+  title: "伊卡的记事本",
+  titleTemplate: ":title - 伊卡的记事本",
+  description: "Ika's Notepad",
   lang: "zh-CN",
   cleanUrls: true,
   srcDir: "./pages",
@@ -32,6 +34,7 @@ export default defineConfig({
     nav: [
       { text: "首页", link: "/" },
       { text: "前端", items: [{ text: "Vue", link: "前端/Vue/Vue学习笔记" }] },
+      { text: "关于", link: "/about" },
     ],
 
     // sidebar: [
@@ -63,6 +66,7 @@ export default defineConfig({
             return renderSandbox(tokens, idx, "sandbox");
           },
         });
+      md.use(BiDirectionalLinks({ dir: "pages" }));
     },
   },
   vite: {

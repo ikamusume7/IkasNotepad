@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "Ika's Notes"
-  text: "伊卡的笔记仓库"
+  name: "Ika's Notepad"
+  text: "伊卡的记事本"
   tagline: 学无止境
   image:
     src: avatar2.webp
