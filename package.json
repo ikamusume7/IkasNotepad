@@ -1,0 +1,24 @@
+{
+  "name": "my-notes",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vitepress dev --port 9999",
+    "build": "vitepress build",
+    "preview": "vitepress preview --port 9999"
+  },
+  "author": "Ika",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.1.1",
+    "@nolebase/vitepress-plugin-highlight-targeted-heading": "^2.1.1",
+    "@nolebase/vitepress-plugin-inline-link-preview": "^2.1.1",
+    "@shikijs/vitepress-twoslash": "^1.6.3",
+    "overlayscrollbars": "^2.8.3",
+    "vitepress": "^1.2.3",
+    "vitepress-markdown-timeline": "^1.2.1",
+    "vue": "^3.4.27"
+  }
+}
