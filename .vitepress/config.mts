@@ -13,6 +13,10 @@ import {
   chineseSearchOptimize,
   pagefindPlugin,
 } from "vitepress-plugin-pagefind";
+import { PageProperties } from "@nolebase/vitepress-plugin-page-properties/vite";
+
+import AutoNav from "vite-plugin-vitepress-auto-nav";
+import VitePressPluginAutoNavSidebar from "vitepress-plugin-auto-nav-sidebar";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -27,22 +31,19 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [{ text: "首页", link: "/" }],
 
-    sidebar: [
-      {
-        text: "Examples",
-        items: [
-          { text: "Markdown Examples", link: "/markdown-examples" },
-          { text: "Runtime API Examples", link: "/api-examples" },
-        ],
-      },
-    ],
+    // sidebar: [
+    //   {
+    //     text: "Examples",
+    //     items: [
+    //       { text: "Markdown Examples", link: "/markdown-examples" },
+    //       { text: "Runtime API Examples", link: "/api-examples" },
+    //     ],
+    //   },
+    // ],
 
     socialLinks: [
       { icon: "github", link: "https://github.com/ikamusume7/MyNotes" },
     ],
-    search: {
-      provider: "local",
-    },
   },
   markdown: {
     codeTransformers: [transformerTwoslash()],
@@ -68,14 +69,25 @@ export default defineConfig({
         repoURL: () => "https://github.com/ikamusume7/MyNotes",
       }),
       GitChangelogMarkdownSection(),
-      // pagefindPlugin({
-      //   customSearchQuery: chineseSearchOptimize,
-      //   btnPlaceholder: "搜索",
-      //   placeholder: "搜索笔记",
-      //   emptyText: "空空如也",
-      //   heading: "共: {{searchResult}} 条结果",
-      //   excludeSelector: ["img", "a.header-anchor"],
+      PageProperties(),
+      pagefindPlugin({
+        customSearchQuery: chineseSearchOptimize,
+        btnPlaceholder: "搜索",
+        placeholder: "搜索笔记",
+        emptyText: "空空如也",
+        heading: "共: {{searchResult}} 条结果",
+        excludeSelector: ["img", "a.header-anchor"],
+      }),
+      // AutoNav({
+      //   // 自定义配置
+      //   useArticleTitle: true,
       // }),
+      VitePressPluginAutoNavSidebar({
+        documentRootPath: "pages",
+        ignoreIndexItems: true,
+        // collapsed: true,
+        useTitleFromFileHeading: true,
+      }),
     ],
     optimizeDeps: {
       exclude: ["@nolebase/vitepress-plugin-enhanced-readabilities/client"],
