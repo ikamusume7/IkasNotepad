@@ -11,24 +11,6 @@
     </template>
     <template #doc-footer-before
       ><div :key="title" class="giscus">
-        <!-- <component
-          :is="'script'"
-          src="https://giscus.app/client.js"
-          data-repo="ikamusume7/MyNotes"
-          data-repo-id="R_kgDOMGWs2w"
-          data-category="Announcements"
-          data-category-id="DIC_kwDOMGWs284Cf8f_"
-          data-mapping="title"
-          data-strict="0"
-          data-reactions-enabled="1"
-          data-emit-metadata="0"
-          data-input-position="top"
-          :data-theme="!isDark ? 'light' : 'dark'"
-          data-lang="zh-CN"
-          data-loading="lazy"
-          crossorigin="anonymous"
-          async
-        /> -->
         <Giscus
           repo="ikamusume7/MyNotes"
           repoId="R_kgDOMGWs2w"
