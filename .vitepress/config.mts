@@ -29,7 +29,10 @@ export default defineConfig({
   // lastUpdated: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: [{ text: "首页", link: "/" }],
+    nav: [
+      { text: "首页", link: "/" },
+      { text: "前端", items: [{ text: "Vue", link: "前端/Vue/Vue学习笔记" }] },
+    ],
 
     // sidebar: [
     //   {
@@ -78,16 +81,16 @@ export default defineConfig({
         heading: "共: {{searchResult}} 条结果",
         excludeSelector: ["img", "a.header-anchor"],
       }),
-      // AutoNav({
-      //   // 自定义配置
-      //   useArticleTitle: true,
-      // }),
-      VitePressPluginAutoNavSidebar({
-        documentRootPath: "pages",
-        ignoreIndexItems: true,
-        // collapsed: true,
-        useTitleFromFileHeading: true,
+      AutoNav({
+        // 自定义配置
+        useArticleTitle: true,
       }),
+      // VitePressPluginAutoNavSidebar({
+      //   documentRootPath: "pages",
+      //   ignoreIndexItems: true,
+      //   // collapsed: true,
+      //   useTitleFromFileHeading: true,
+      // }),
     ],
     optimizeDeps: {
       exclude: ["@nolebase/vitepress-plugin-enhanced-readabilities/client"],

@@ -3,23 +3,31 @@
 layout: home
 
 hero:
-  name: "伊卡的笔记仓库"
-  # text: "学习笔记存放处"
+  name: "Ika's Notes"
+  text: "伊卡的笔记仓库"
   tagline: 学无止境
+  image:
+    src: avatar2.webp
+    alt: Ika's Notes
   actions:
-    - theme: brand
-      text: 导航
-      link: /markdown-examples
+    # - theme: brand
+    #   text: 导航
+    #   link: /markdown-examples
     # - theme: alt
     #   text: 前端笔记
     #   link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 前端笔记
+    details: 关于前端的知识
+    link: 前端/Vue/Vue学习笔记
+  - title: TODO
+    details: 敬请期待
+  - title: TODO
+    details: 敬请期待
 ---
+
+<style> 
+
+</style>
 
