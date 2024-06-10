@@ -57,6 +57,7 @@ export default defineConfig({
     nav: [
       { text: "首页", link: "/" },
       { text: "前端", items: [{ text: "Vue", link: "前端/Vue/Vue学习笔记" }] },
+      { text: "Bug合集", link: "Bug合集/VitePress篇" },
       { text: "关于", link: "/about" },
     ],
 
@@ -116,7 +117,7 @@ export default defineConfig({
       }),
       AutoNav({
         // 自定义配置
-        useArticleTitle: true,
+        // useArticleTitle: true,
       }),
       // VitePressPluginAutoNavSidebar({
       //   documentRootPath: "pages",
