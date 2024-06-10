@@ -45,12 +45,12 @@ export default defineConfig({
         src: "https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js",
       },
     ],
-    // [
-    //   "script",
-    //   {
-    //     src: "https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js",
-    //   },
-    // ],
+    [
+      "script",
+      {
+        src: "https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js",
+      },
+    ],
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config

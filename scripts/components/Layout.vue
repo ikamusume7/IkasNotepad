@@ -56,11 +56,11 @@ import { NolebaseHighlightTargetedHeading } from "@nolebase/vitepress-plugin-hig
 import Giscus from "@giscus/vue";
 
 // 确保 Meting.js 只初始化一次
-onMounted(() => {
-  const script = document.createElement("script");
-  script.src = "https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js";
-  document.body.appendChild(script);
-});
+// onMounted(() => {
+//   const script = document.createElement("script");
+//   script.src = "https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js";
+//   document.body.appendChild(script);
+// });
 
 const { Layout } = DefaultTheme;
 const { title, isDark } = useData();
