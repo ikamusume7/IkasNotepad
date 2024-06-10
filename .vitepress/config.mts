@@ -18,7 +18,6 @@ import { PageProperties } from "@nolebase/vitepress-plugin-page-properties/vite"
 import { BiDirectionalLinks } from "@nolebase/markdown-it-bi-directional-links";
 
 import AutoNav from "vite-plugin-vitepress-auto-nav";
-import VitePressPluginAutoNavSidebar from "vitepress-plugin-auto-nav-sidebar";
 
 import UnoCSS from "unocss/vite";
 
@@ -46,12 +45,12 @@ export default defineConfig({
         src: "https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js",
       },
     ],
-    [
-      "script",
-      {
-        src: "https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js",
-      },
-    ],
+    // [
+    //   "script",
+    //   {
+    //     src: "https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js",
+    //   },
+    // ],
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config

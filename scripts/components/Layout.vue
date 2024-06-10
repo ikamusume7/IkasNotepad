@@ -6,13 +6,15 @@
     </template>
     <template #nav-bar-content-after>
       <NolebaseEnhancedReadabilitiesMenu />
-      <meting-js
-        server="netease"
-        type="playlist"
-        id="6806979872"
-        mini="true"
-        order="random"
-      ></meting-js>
+      <ClientOnly>
+        <meting-js
+          server="netease"
+          type="playlist"
+          id="6806979872"
+          mini="true"
+          order="random"
+        ></meting-js>
+      </ClientOnly>
     </template>
     <template #nav-screen-content-after>
       <NolebaseEnhancedReadabilitiesScreenMenu />
@@ -35,13 +37,14 @@
         />
       </div>
     </template>
+    <template #layout-bottom> </template>
   </Layout>
 </template>
 
 <script setup lang="ts">
 import DefaultTheme from "vitepress/theme";
 import { useData } from "vitepress";
-import { nextTick, provide } from "vue";
+import { nextTick, onMounted, provide } from "vue";
 
 import {
   NolebaseEnhancedReadabilitiesMenu,
@@ -51,6 +54,13 @@ import {
 import { NolebaseHighlightTargetedHeading } from "@nolebase/vitepress-plugin-highlight-targeted-heading/client";
 
 import Giscus from "@giscus/vue";
+
+// 确保 Meting.js 只初始化一次
+onMounted(() => {
+  const script = document.createElement("script");
+  script.src = "https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js";
+  document.body.appendChild(script);
+});
 
 const { Layout } = DefaultTheme;
 const { title, isDark } = useData();
