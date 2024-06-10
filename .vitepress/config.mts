@@ -20,6 +20,8 @@ import { BiDirectionalLinks } from "@nolebase/markdown-it-bi-directional-links";
 import AutoNav from "vite-plugin-vitepress-auto-nav";
 import VitePressPluginAutoNavSidebar from "vitepress-plugin-auto-nav-sidebar";
 
+import UnoCSS from "unocss/vite";
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "伊卡的记事本",
@@ -29,6 +31,28 @@ export default defineConfig({
   cleanUrls: true,
   srcDir: "./pages",
   // lastUpdated: true,
+  head: [
+    ["link", { rel: "icon", href: "favicon.ico" }],
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css",
+      },
+    ],
+    [
+      "script",
+      {
+        src: "https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js",
+      },
+    ],
+    [
+      "script",
+      {
+        src: "https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js",
+      },
+    ],
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -50,6 +74,12 @@ export default defineConfig({
     socialLinks: [
       { icon: "github", link: "https://github.com/ikamusume7/MyNotes" },
     ],
+    footer: {
+      message:
+        'This site is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>. Favicon by <a href="https://icons8.com target="_blank"" >Icons8<a>',
+      copyright:
+        'Copyright © 2024-present <a href="https://github.com/ikamusume7" target="_blank">Ika</a>',
+    },
   },
   markdown: {
     codeTransformers: [transformerTwoslash()],
@@ -95,6 +125,7 @@ export default defineConfig({
       //   // collapsed: true,
       //   useTitleFromFileHeading: true,
       // }),
+      UnoCSS(),
     ],
     optimizeDeps: {
       exclude: ["@nolebase/vitepress-plugin-enhanced-readabilities/client"],

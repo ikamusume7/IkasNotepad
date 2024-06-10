@@ -14,6 +14,7 @@ import "@shikijs/vitepress-twoslash/style.css";
 import "vitepress-plugin-sandpack/dist/style.css";
 import "vitepress-plugin-codeblocks-fold/style/index.css";
 import "@nolebase/vitepress-plugin-git-changelog/client/style.css";
+import "virtual:uno.css";
 
 import Layout from "./components/Layout.vue";
 

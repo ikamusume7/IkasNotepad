@@ -2,9 +2,18 @@
   <Layout>
     <template #layout-top>
       <NolebaseHighlightTargetedHeading />
+      <!-- <div id="aplayer"></div> -->
     </template>
     <template #nav-bar-content-after>
       <NolebaseEnhancedReadabilitiesMenu />
+      <meting-js
+        server="netease"
+        type="playlist"
+        id="6806979872"
+        mini="true"
+        order="random"
+      >
+      </meting-js>
     </template>
     <template #nav-screen-content-after>
       <NolebaseEnhancedReadabilitiesScreenMenu />
@@ -34,6 +43,7 @@
 import DefaultTheme from "vitepress/theme";
 import { useData } from "vitepress";
 import { nextTick, provide } from "vue";
+import "APlayer/dist/APlayer.min.css";
 
 import {
   NolebaseEnhancedReadabilitiesMenu,
