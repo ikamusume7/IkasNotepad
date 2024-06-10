@@ -45,7 +45,6 @@
 import DefaultTheme from "vitepress/theme";
 import { useData } from "vitepress";
 import { nextTick, provide } from "vue";
-import "APlayer/dist/APlayer.min.css";
 
 import {
   NolebaseEnhancedReadabilitiesMenu,
