@@ -12,7 +12,7 @@
         id="6806979872"
         mini="true"
         order="random"
-      />
+      ></meting-js>
     </template>
     <template #nav-screen-content-after>
       <NolebaseEnhancedReadabilitiesScreenMenu />
