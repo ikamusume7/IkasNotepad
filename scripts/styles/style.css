@@ -166,3 +166,7 @@
 @media (min-width: 960px) { 
   :root { --vp-home-hero-image-filter: blur(68px); } 
 }
+
+.aplayer{
+  /* border-radius: 50px; */
+}

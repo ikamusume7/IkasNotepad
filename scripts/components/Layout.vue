@@ -6,14 +6,6 @@
     </template>
     <template #nav-bar-content-after>
       <NolebaseEnhancedReadabilitiesMenu />
-      <meting-js
-        server="netease"
-        type="playlist"
-        id="6806979872"
-        mini="true"
-        order="random"
-      >
-      </meting-js>
     </template>
     <template #nav-screen-content-after>
       <NolebaseEnhancedReadabilitiesScreenMenu />
@@ -35,6 +27,16 @@
           loading="lazy"
         />
       </div>
+    </template>
+    <template #layout-bottom>
+      <meting-js
+        server="netease"
+        type="playlist"
+        id="6806979872"
+        fixed="true"
+        order="random"
+      >
+      </meting-js>
     </template>
   </Layout>
 </template>

@@ -4,7 +4,6 @@ import type { Theme } from "vitepress";
 import { useData, useRoute } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 
-import "./styles/style.css";
 import "@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css";
 import "@nolebase/vitepress-plugin-inline-link-preview/client/style.css";
 import "@nolebase/vitepress-plugin-highlight-targeted-heading/client/style.css";
@@ -14,7 +13,9 @@ import "@shikijs/vitepress-twoslash/style.css";
 import "vitepress-plugin-sandpack/dist/style.css";
 import "vitepress-plugin-codeblocks-fold/style/index.css";
 import "@nolebase/vitepress-plugin-git-changelog/client/style.css";
+import "aplayer/dist/APlayer.min.css";
 import "virtual:uno.css";
+import "./styles/style.css";
 
 import Layout from "./components/Layout.vue";
 
@@ -52,6 +53,10 @@ export default {
     enhanceAppWithTabs(app);
     app.component("Sandbox", Sandbox);
     app.use(NolebaseGitChangelogPlugin);
+
+    // const { isMobile } = useDeviceType();
+
+    // app.provide("isMobile", isMobile);
   },
   setup() {
     onMounted(() => {

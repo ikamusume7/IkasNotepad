@@ -33,13 +33,13 @@ export default defineConfig({
   // lastUpdated: true,
   head: [
     ["link", { rel: "icon", href: "favicon.ico" }],
-    [
-      "link",
-      {
-        rel: "stylesheet",
-        href: "https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css",
-      },
-    ],
+    // [
+    //   "link",
+    //   {
+    //     rel: "stylesheet",
+    //     href: "https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css",
+    //   },
+    // ],
     [
       "script",
       {
