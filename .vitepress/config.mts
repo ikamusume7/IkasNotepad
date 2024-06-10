@@ -76,7 +76,7 @@ export default defineConfig({
     ],
     footer: {
       message:
-        'This site is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>. Favicon by <a href="https://icons8.com target="_blank"" >Icons8<a>.',
+        'This site is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>. Favicon by <a href="https://icons8.com" target="_blank">Icons8<a>.',
       copyright: "Copyright © 2024-present Ika",
     },
   },
