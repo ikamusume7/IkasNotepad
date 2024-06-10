@@ -10,7 +10,7 @@ tag:
 ## Meting.js
 
 ::: danger
-控制台出现“Hydration completed but contains mismatches.”的错误，并且有两个 aplyer 播放器
+控制台出现 “Hydration completed but contains mismatches.” 的错误，并且有两个 aplyer 播放器
 
 :::
 
@@ -27,3 +27,9 @@ tag:
   ></meting-js>
 </ClientOnly>
 ```
+
+::: warning
+控制台出现 “Failed to resolve component: meting-js” 的警告
+:::
+
+解决方法：未解决
