@@ -33,6 +33,9 @@ import codeblocksFold from "vitepress-plugin-codeblocks-fold";
 
 import { NolebaseGitChangelogPlugin } from "@nolebase/vitepress-plugin-git-changelog/client";
 
+import type { Options } from "@nolebase/vitepress-plugin-enhanced-readabilities/client";
+import { InjectionKey } from "@nolebase/vitepress-plugin-enhanced-readabilities/client";
+
 export default {
   extends: DefaultTheme,
   // Layout: () => {
@@ -57,6 +60,12 @@ export default {
     // const { isMobile } = useDeviceType();
 
     // app.provide("isMobile", isMobile);
+    app.provide(InjectionKey, {
+      layoutSwitch: {
+        defaultMode: 4,
+      },
+      spotlight: { defaultToggle: true, defaultStyle: 2 },
+    } as Options);
   },
   setup() {
     onMounted(() => {

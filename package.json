@@ -4,9 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vitepress dev --port 9999",
+    "dev": "vitepress dev --port 8888",
     "build": "vitepress build",
-    "preview": "vitepress preview --port 9999"
+    "preview": "vitepress preview --port 8888"
   },
   "author": "Ika",
   "license": "MIT",
