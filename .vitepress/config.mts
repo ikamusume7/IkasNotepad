@@ -87,17 +87,6 @@ export default defineConfig({
       },
       { text: "关于", link: "/about" },
     ],
-
-    // sidebar: [
-    //   {
-    //     text: "Examples",
-    //     items: [
-    //       { text: "Markdown Examples", link: "/markdown-examples" },
-    //       { text: "Runtime API Examples", link: "/api-examples" },
-    //     ],
-    //   },
-    // ],
-
     socialLinks: [
       { icon: "github", link: "https://github.com/ikamusume7/MyNotes" },
     ],
@@ -118,6 +107,10 @@ export default defineConfig({
         dateStyle: "short",
         timeStyle: "short",
       },
+    },
+    outline: {
+      level: "deep",
+      label: "文章目录",
     },
   },
   markdown: {

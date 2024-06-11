@@ -170,6 +170,8 @@
   --vp-button-alt-active-border: #a6b2b4;
   --vp-button-alt-active-text: var(--vp-c-white);
   --vp-button-alt-active-bg: #a6b2b4;
+
+  --vp-code-color: #dd3fac;
 }
 @media (min-width: 640px) {
   :root {
