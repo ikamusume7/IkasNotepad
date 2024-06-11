@@ -9,16 +9,9 @@ import {
   GitChangelog,
   GitChangelogMarkdownSection,
 } from "@nolebase/vitepress-plugin-git-changelog/vite";
-import {
-  chineseSearchOptimize,
-  pagefindPlugin,
-} from "vitepress-plugin-pagefind";
 import { PageProperties } from "@nolebase/vitepress-plugin-page-properties/vite";
-
 import { BiDirectionalLinks } from "@nolebase/markdown-it-bi-directional-links";
-
 import AutoNav from "vite-plugin-vitepress-auto-nav";
-
 import UnoCSS from "unocss/vite";
 
 // https://vitepress.dev/reference/site-config
@@ -143,24 +136,10 @@ export default defineConfig({
       }),
       GitChangelogMarkdownSection(),
       PageProperties(),
-      pagefindPlugin({
-        customSearchQuery: chineseSearchOptimize,
-        btnPlaceholder: "搜索",
-        placeholder: "搜索笔记",
-        emptyText: "空空如也",
-        heading: "共: {{searchResult}} 条结果",
-        excludeSelector: ["img", "a.header-anchor"],
-      }),
       AutoNav({
         // 自定义配置
         // useArticleTitle: true,
       }),
-      // VitePressPluginAutoNavSidebar({
-      //   documentRootPath: "pages",
-      //   ignoreIndexItems: true,
-      //   // collapsed: true,
-      //   useTitleFromFileHeading: true,
-      // }),
       UnoCSS(),
     ],
     optimizeDeps: {

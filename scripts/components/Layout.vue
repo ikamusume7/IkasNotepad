@@ -20,22 +20,24 @@
       <NolebaseEnhancedReadabilitiesScreenMenu />
     </template>
     <template #doc-after>
-      <div :key="title" class="giscus">
-        <Giscus
-          repo="ikamusume7/MyNotes"
-          repoId="R_kgDOMGWs2w"
-          category="Announcements"
-          categoryId="DIC_kwDOMGWs284Cf8f_"
-          mapping="title"
-          strict="0"
-          reactionsEnabled="1"
-          emitMetadata="0"
-          inputPosition="top"
-          :theme="!isDark ? 'light' : 'dark'"
-          lang="zh-CN"
-          loading="lazy"
-        />
-      </div>
+      <ClientOnly>
+        <div :key="title" class="giscus">
+          <Giscus
+            repo="ikamusume7/MyNotes"
+            repoId="R_kgDOMGWs2w"
+            category="Announcements"
+            categoryId="DIC_kwDOMGWs284Cf8f_"
+            mapping="title"
+            strict="0"
+            reactionsEnabled="1"
+            emitMetadata="0"
+            inputPosition="top"
+            :theme="!isDark ? 'light' : 'dark'"
+            lang="zh-CN"
+            loading="lazy"
+          />
+        </div>
+      </ClientOnly>
     </template>
     <template #layout-bottom> </template>
   </Layout>
