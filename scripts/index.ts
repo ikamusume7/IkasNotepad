@@ -2,7 +2,7 @@
 import { h, onMounted } from "vue";
 import type { Theme } from "vitepress";
 import { useData, useRoute } from "vitepress";
-import DefaultTheme from "vitepress/theme";
+import DefaultTheme from "vitepress/theme-without-fonts";
 
 import "@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css";
 import "@nolebase/vitepress-plugin-inline-link-preview/client/style.css";
@@ -81,4 +81,3 @@ export default {
     });
   },
 } satisfies Theme;
-

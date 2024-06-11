@@ -52,8 +52,32 @@ export default defineConfig({
       },
     ],
   ],
+  transformHead({ assets }) {
+    // 相应地调整正则表达式以匹配字体
+    const myFontFile = assets.find((file) => /文道黑玫瑰\.\w+\.ttf/);
+    if (myFontFile) {
+      return [
+        [
+          "link",
+          {
+            rel: "preload",
+            href: myFontFile,
+            as: "font",
+            type: "font/ttf",
+            crossorigin: "",
+          },
+        ],
+      ];
+    }
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: {
+      light: "/logo-light.png",
+      dark: "/logo-dark.png",
+      alt: "伊卡的记事本Logo",
+    },
+    siteTitle: false,
     nav: [
       { text: "首页", link: "/" },
       { text: "前端", items: [{ text: "Vue", link: "前端/Vue/Vue学习笔记" }] },
@@ -153,4 +177,3 @@ export default defineConfig({
     },
   },
 });
-

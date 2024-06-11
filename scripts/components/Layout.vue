@@ -2,18 +2,18 @@
   <Layout>
     <template #layout-top>
       <NolebaseHighlightTargetedHeading />
-      <!-- <div id="aplayer"></div> -->
     </template>
     <template #nav-bar-content-after>
       <NolebaseEnhancedReadabilitiesMenu />
       <ClientOnly>
-        <meting-js
+        <component
+          is="meting-js"
           server="netease"
           type="playlist"
           id="6806979872"
           mini="true"
           order="random"
-        ></meting-js>
+        />
       </ClientOnly>
     </template>
     <template #nav-screen-content-after>
@@ -42,7 +42,7 @@
 </template>
 
 <script setup lang="ts">
-import DefaultTheme from "vitepress/theme";
+import DefaultTheme from "vitepress/theme-without-fonts";
 import { useData } from "vitepress";
 import { nextTick, onMounted, provide } from "vue";
 
