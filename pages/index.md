@@ -22,24 +22,29 @@ hero:
 
 features:
   - icon:
-      light: ic--outline-web-light.svg
-      dark: ic--outline-web-dark.svg
+      light: icons/ic--outline-web-light.svg
+      dark: icons/ic--outline-web-dark.svg
       alt: 前端笔记
     title: 前端笔记
     details: 关于前端的知识
     link: 前端/Vue/Vue学习笔记
     linkText: 前往
   - icon:
-      light: ic--outline-bug-report-light.svg
-      dark: ic--outline-bug-report-dark.svg
+      light: icons/ic--outline-videogame-asset-light.svg
+      dark: icons/ic--outline-videogame-asset-dark.svg
+    title: 游戏开发
+    details: 主要使用Unity引擎进行游戏开发
+  - icon:
+      light: icons/ic--outline-bug-report-light.svg
+      dark: icons/ic--outline-bug-report-dark.svg
       alt: Bug合集
     title: Bug合集
     details: 记录遇到的Bug与解决方法
     link: Bug合集/VitePress篇
     linkText: 前往
   - icon:
-      light: ic--outline-construction-light.svg
-      dark: ic--outline-construction-dark.svg
+      light: icons/ic--outline-construction-light.svg
+      dark: icons/ic--outline-construction-dark.svg
       alt: 工具合集
     title: 工具合集
     details: 介绍各种使用工具
