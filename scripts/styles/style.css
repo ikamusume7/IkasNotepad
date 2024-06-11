@@ -199,6 +199,16 @@
   --os-handle-bg-active: rgba(108, 108, 108, 0.88);
 }
 
+.vp-doc a {
+  color: #49a1d4;
+  text-decoration: none;
+}
+
+.vp-doc a:hover {
+  color: #49a1d4;
+  text-decoration: underline;
+}
+
 .aplayer {
   /* border-radius: 50px; */
 }

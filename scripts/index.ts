@@ -34,7 +34,8 @@ import codeblocksFold from "vitepress-plugin-codeblocks-fold";
 import { NolebaseGitChangelogPlugin } from "@nolebase/vitepress-plugin-git-changelog/client";
 
 import type { Options } from "@nolebase/vitepress-plugin-enhanced-readabilities/client";
-import { InjectionKey } from "@nolebase/vitepress-plugin-enhanced-readabilities/client";
+import { InjectionKey as readabilityKey } from "@nolebase/vitepress-plugin-enhanced-readabilities/client";
+import { InjectionKey as changelogKey } from "@nolebase/vitepress-plugin-git-changelog/client";
 
 export default {
   extends: DefaultTheme,
@@ -60,12 +61,21 @@ export default {
     // const { isMobile } = useDeviceType();
 
     // app.provide("isMobile", isMobile);
-    app.provide(InjectionKey, {
+    app.provide(readabilityKey, {
       layoutSwitch: {
         defaultMode: 4,
       },
       spotlight: { defaultToggle: true, defaultStyle: 2 },
     } as Options);
+    app.provide(changelogKey, {
+      mapAuthors: [
+        {
+          name: "ikamusume7",
+          username: "ikamusume7",
+          mapByEmailAliases: ["https://github.com/ikamusume7"],
+        },
+      ],
+    });
   },
   setup() {
     onMounted(() => {
