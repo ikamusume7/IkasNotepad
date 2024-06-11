@@ -72,7 +72,7 @@ export default {
         {
           name: "ikamusume7",
           username: "ikamusume7",
-          mapByEmailAliases: ["https://github.com/ikamusume7"],
+          links: [{ type: "github", link: "https://github.com/ikamusume7" }],
         },
       ],
     });
