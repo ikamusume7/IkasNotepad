@@ -72,9 +72,19 @@ export default defineConfig({
     },
     siteTitle: false,
     nav: [
-      { text: "首页", link: "/" },
+      { text: "日志", link: "/日志/时间线" },
       { text: "前端", items: [{ text: "Vue", link: "前端/Vue/Vue学习笔记" }] },
-      { text: "Bug合集", link: "Bug合集/VitePress篇" },
+      {
+        text: "游戏开发",
+        items: [{ text: "C#", link: "" }],
+      },
+      {
+        text: "杂物",
+        items: [
+          { text: "工具合集", link: "杂物/工具合集/VitePress插件介绍" },
+          { text: "Bug合集", link: "杂物/Bug合集/VitePress篇" },
+        ],
+      },
       { text: "关于", link: "/about" },
     ],
 
