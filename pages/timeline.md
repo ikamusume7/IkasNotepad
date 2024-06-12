@@ -2,12 +2,22 @@
 titleTemplate: "日志 - :title"
 ---
 
+::: timeline 2024-06-12
+
+- 新增
+  - [[frontend/vue/组件]] <Badge type="warning" text="未完成" />
+  - [[chat/game/黑神话-悟空]] <Badge type="tip" text="完成" />
+- 更新
+  - [[frontend/vue/基础]] <Badge type="tip" text="完成" />
+
+:::
+
 ::: timeline 2024-06-11
 
 - 新增
-  - 工具合集 [[VitePress插件介绍]]
+  - [[misc/tools/VitePress插件介绍]] <Badge type="warning" text="未完成" />
 - 更新
-  - Bug 合集 [[VitePress篇]]
-  - 前端 [[Vue学习笔记]]
+  - [[misc/bugs/VitePress篇]] <Badge type="warning" text="未完成" />
+  - [[frontend/vue/基础]] <Badge type="warning" text="未完成" />
 
 :::
