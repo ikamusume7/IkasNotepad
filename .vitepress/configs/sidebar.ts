@@ -39,7 +39,7 @@ export const sidebar: DefaultTheme.Sidebar = {
 };
 
 function searchFiles(searchPath: string): DefaultTheme.SidebarItem[] {
-  const absolutePath = process.cwd() + "/pages/" + searchPath;
+  const absolutePath = process.cwd() + "/pages" + searchPath;
   const files = fs.readdirSync(absolutePath);
   const items: DefaultTheme.SidebarItem[] = [];
   files.forEach((file: string) => {
