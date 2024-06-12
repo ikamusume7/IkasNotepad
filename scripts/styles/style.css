@@ -138,6 +138,10 @@
 }
 
 :root {
+  --vp-c-brand-1: #49a1d4;
+
+  --vp-c-alt-1: #858e90;
+
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(
     120deg,
@@ -153,23 +157,23 @@
 
   --vp-button-brand-border: transparent;
   --vp-button-brand-text: var(--vp-c-white);
-  --vp-button-brand-bg: #858e90;
+  --vp-button-brand-bg: var(--vp-c-brand-1);
   --vp-button-brand-hover-border: transparent;
   --vp-button-brand-hover-text: var(--vp-c-white);
-  --vp-button-brand-hover-bg: #858e90;
+  --vp-button-brand-hover-bg: var(--vp-c-brand-1);
   --vp-button-brand-active-border: transparent;
   --vp-button-brand-active-text: var(--vp-c-white);
-  --vp-button-brand-active-bg: #858e90;
+  --vp-button-brand-active-bg: var(--vp-c-brand-1);
 
-  --vp-button-alt-border: #a6b2b4;
-  --vp-button-alt-text: #a6b2b4;
+  --vp-button-alt-border: var(--vp-c-alt-1);
+  --vp-button-alt-text: var(--vp-c-alt-1);
   --vp-button-alt-bg: transparent;
-  --vp-button-alt-hover-border: #858e90;
+  --vp-button-alt-hover-border: var(--vp-c-alt-1);
   --vp-button-alt-hover-text: var(--vp-c-white);
-  --vp-button-alt-hover-bg: #858e90;
-  --vp-button-alt-active-border: #a6b2b4;
+  --vp-button-alt-hover-bg: var(--vp-c-alt-1);
+  --vp-button-alt-active-border: var(--vp-c-alt-1);
   --vp-button-alt-active-text: var(--vp-c-white);
-  --vp-button-alt-active-bg: #a6b2b4;
+  --vp-button-alt-active-bg: var(--vp-c-alt-1);
 
   --vp-code-color: #dd3fac;
 }

@@ -9,6 +9,7 @@ import { renderSandbox } from "vitepress-plugin-sandpack";
 import { BiDirectionalLinks } from "@nolebase/markdown-it-bi-directional-links";
 
 export const markdown: UserConfig["markdown"] = {
+  lineNumbers: true,
   codeTransformers: [transformerTwoslash()],
   config(md) {
     // 其他 markdown-it 配置...

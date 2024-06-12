@@ -4,20 +4,20 @@ import path from "path";
 import process from "process";
 
 export const sidebar: DefaultTheme.Sidebar = {
-  "/front-end/": [
+  "/frontend/": [
     {
       text: "前言",
-      link: "/front-end/",
+      link: "/frontend/",
     },
     {
       text: "Vue",
-      items: searchFiles("front-end/vue"),
+      items: searchFiles("/frontend/vue"),
     },
   ],
-  "/game-dev/": [
+  "/gamedev/": [
     {
       text: "前言",
-      link: "/game-dev/",
+      link: "/gamedev/",
     },
   ],
   "/chat/": [
@@ -29,11 +29,11 @@ export const sidebar: DefaultTheme.Sidebar = {
   "/misc/": [
     {
       text: "工具合集",
-      items: searchFiles("misc/tools"),
+      items: searchFiles("/misc/tools"),
     },
     {
       text: "Bug合集",
-      items: searchFiles("misc/bugs"),
+      items: searchFiles("/misc/bugs"),
     },
   ],
 };

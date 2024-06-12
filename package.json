@@ -26,7 +26,6 @@
     "meting": "^2.0.1",
     "overlayscrollbars": "^2.8.3",
     "unocss": "^0.60.4",
-    "vite-plugin-vitepress-auto-nav": "^2.3.2",
     "vitepress": "^1.2.3",
     "vitepress-markdown-timeline": "^1.2.1",
     "vitepress-plugin-codeblocks-fold": "^1.2.28",
