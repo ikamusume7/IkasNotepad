@@ -1,2 +1,2 @@
-# MyNotes
+# IkasNotepad
  
