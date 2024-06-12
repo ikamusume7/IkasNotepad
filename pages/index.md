@@ -30,14 +30,14 @@ features:
       alt: 前端笔记
     title: 前端笔记
     details: 关于前端的知识
-    link: front-end/
+    link: frontend/
     linkText: 前往
   - icon:
       light: icons/ic--outline-videogame-asset-light.svg
       dark: icons/ic--outline-videogame-asset-dark.svg
     title: 游戏开发
     details: 主要使用Unity引擎进行游戏开发
-    link: game-dev/
+    link: gamedev/
     linkText: 前往
   - icon:
       light: icons\ic--outline-chat-light.svg
