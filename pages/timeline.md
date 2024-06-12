@@ -1,10 +1,10 @@
 ---
+titleTemplate: "日志 - :title"
 ---
 
 ::: timeline 2024-06-11
 
 - 新增
-  - 日志 [[时间线]]
   - 工具合集 [[VitePress插件介绍]]
 - 更新
   - Bug 合集 [[VitePress篇]]

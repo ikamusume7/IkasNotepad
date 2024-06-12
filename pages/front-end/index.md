@@ -1,4 +1,5 @@
 ---
+titleTemplate: "前端笔记 - :title"
 ---
 
 ::: info 前言

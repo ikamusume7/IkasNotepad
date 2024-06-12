@@ -1,4 +1,5 @@
 ---
+titleTemplate: "杂谈 - :title"
 ---
 
 ::: info 前言

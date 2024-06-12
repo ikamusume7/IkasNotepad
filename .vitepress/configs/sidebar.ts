@@ -20,7 +20,6 @@ export const sidebar: DefaultTheme.Sidebar = {
       link: "/game-dev/",
     },
   ],
-  "/records/": searchFiles("records"),
   "/chat/": [
     {
       text: "前言",

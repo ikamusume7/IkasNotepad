@@ -15,7 +15,7 @@ hero:
   actions:
     - theme: brand
       text: 日志
-      link: records/时间线
+      link: timeline
     - theme: alt
       text: 插件介绍
       link: misc/tools/VitePress插件介绍
