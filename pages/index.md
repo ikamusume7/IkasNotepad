@@ -47,7 +47,3 @@ features:
     link: chat/
     linkText: 前往
 ---
-
-<style> 
-
-</style>

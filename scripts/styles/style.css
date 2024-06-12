@@ -214,3 +214,8 @@
 .aplayer {
   /* border-radius: 50px; */
 }
+
+/* 图片点击放大优先级调整 */
+.medium-zoom-image {
+  z-index: 9999 !important;
+}
