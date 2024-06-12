@@ -25,6 +25,10 @@ export const sidebar: DefaultTheme.Sidebar = {
       text: "前言",
       link: "/chat/",
     },
+    {
+      text: "游戏感想",
+      items: searchFiles("/chat/game"),
+    },
   ],
   "/misc/": [
     {
