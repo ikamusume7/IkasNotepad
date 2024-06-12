@@ -123,10 +123,15 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-custom-block-tip-border: #42b883;
+  /* --vp-custom-block-tip-border: transparent;
   --vp-custom-block-tip-text: var(--vp-c-text-1);
-  --vp-custom-block-tip-bg: transparent;
-  --vp-custom-block-tip-code-bg: var(--vt-c-white-soft);
+  --vp-custom-block-tip-bg: #deedf4;
+  --vp-custom-block-tip-code-bg: var(--vt-c-white-soft); */
+
+  --vp-custom-block-info-border: #42b883;
+  --vp-custom-block-info-text: var(--vp-c-text-1);
+  --vp-custom-block-info-bg: transparent;
+  --vp-custom-block-info-code-bg: var(--vt-c-white-soft);
 }
 
 /**
@@ -176,6 +181,11 @@
   --vp-button-alt-active-bg: var(--vp-c-alt-1);
 
   --vp-code-color: #dd3fac;
+
+  --vp-badge-tip-text: #18965d;
+  --vp-badge-tip-bg: #bce2d1;
+
+  --vp-nolebase-highlight-targeted-heading-bg: #915930;
 }
 @media (min-width: 640px) {
   :root {
@@ -213,6 +223,20 @@
 .vp-doc a:hover {
   color: #49a1d4;
   text-decoration: underline;
+}
+
+.custom-block.info a {
+  color: #49a1d4;
+  text-decoration: none;
+}
+
+.custom-block.info a:hover {
+  color: #49a1d4;
+  text-decoration: underline;
+}
+
+.custom-block.info code {
+  color: #0faa64;
 }
 
 .aplayer {

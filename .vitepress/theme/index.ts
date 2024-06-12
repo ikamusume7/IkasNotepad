@@ -73,7 +73,7 @@ export default {
     onMounted(() => {
       initZoom();
       OverlayScrollbars(document.body, {
-        scrollbars: { theme: "os-theme-dark" },
+        // scrollbars: { theme: "os-theme-dark" },
       });
 
       // get frontmatter and route
