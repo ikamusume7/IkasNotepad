@@ -1,18 +1,6 @@
 import { defineConfig } from "vitepress";
-import { InlineLinkPreviewElementTransform } from "@nolebase/vitepress-plugin-inline-link-preview/markdown-it";
-import timeline from "vitepress-markdown-timeline";
-import { transformerTwoslash } from "@shikijs/vitepress-twoslash";
-import { tabsMarkdownPlugin } from "vitepress-plugin-tabs";
-import container from "markdown-it-container";
-import { renderSandbox } from "vitepress-plugin-sandpack";
-import {
-  GitChangelog,
-  GitChangelogMarkdownSection,
-} from "@nolebase/vitepress-plugin-git-changelog/vite";
-import { PageProperties } from "@nolebase/vitepress-plugin-page-properties/vite";
-import { BiDirectionalLinks } from "@nolebase/markdown-it-bi-directional-links";
-import AutoNav from "vite-plugin-vitepress-auto-nav";
-import UnoCSS from "unocss/vite";
+
+import { nav, sidebar, markdown, vite } from "./configs";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -25,13 +13,6 @@ export default defineConfig({
   lastUpdated: true,
   head: [
     ["link", { rel: "icon", href: "favicon.ico" }],
-    // [
-    //   "link",
-    //   {
-    //     rel: "stylesheet",
-    //     href: "https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css",
-    //   },
-    // ],
     [
       "script",
       {
@@ -45,24 +26,6 @@ export default defineConfig({
       },
     ],
   ],
-  transformHead({ assets }) {
-    // 相应地调整正则表达式以匹配字体
-    const myFontFile = assets.find((file) => /文道黑玫瑰\.\w+\.ttf/);
-    if (myFontFile) {
-      return [
-        [
-          "link",
-          {
-            rel: "preload",
-            href: myFontFile,
-            as: "font",
-            type: "font/ttf",
-            crossorigin: "",
-          },
-        ],
-      ];
-    }
-  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: {
@@ -71,22 +34,8 @@ export default defineConfig({
       alt: "伊卡的记事本Logo",
     },
     siteTitle: false,
-    nav: [
-      { text: "日志", link: "/日志/时间线" },
-      { text: "前端", items: [{ text: "Vue", link: "前端/Vue/Vue学习笔记" }] },
-      {
-        text: "游戏开发",
-        items: [{ text: "C#", link: "" }],
-      },
-      {
-        text: "杂物",
-        items: [
-          { text: "工具合集", link: "杂物/工具合集/VitePress插件介绍" },
-          { text: "Bug合集", link: "杂物/Bug合集/VitePress篇" },
-        ],
-      },
-      { text: "关于", link: "/about" },
-    ],
+    nav: nav,
+    sidebar: sidebar,
     socialLinks: [
       { icon: "github", link: "https://github.com/ikamusume7/MyNotes" },
     ],
@@ -110,52 +59,18 @@ export default defineConfig({
     },
     outline: {
       level: "deep",
-      label: "文章目录",
+      label: "页面导航",
     },
+    docFooter: {
+      prev: "上一页",
+      next: "下一页",
+    },
+    darkModeSwitchLabel: "切换主题",
+    lightModeSwitchTitle: "切换到浅色主题",
+    darkModeSwitchTitle: "切换到深色主题",
+    sidebarMenuLabel: "菜单",
+    returnToTopLabel: "返回顶部",
   },
-  markdown: {
-    codeTransformers: [transformerTwoslash()],
-    config(md) {
-      // 其他 markdown-it 配置...
-      // @ts-expect-error unmatched type for VitePress, ref https://github.com/nolebase/integrations/pull/228 [!code ++]
-      md.use(InlineLinkPreviewElementTransform);
-      md.use(timeline);
-      md.use(tabsMarkdownPlugin);
-      md
-        // the second parameter is html tag name
-        .use(container, "sandbox", {
-          render(tokens, idx) {
-            return renderSandbox(tokens, idx, "sandbox");
-          },
-        });
-      md.use(BiDirectionalLinks({ dir: "pages" }));
-    },
-  },
-  vite: {
-    plugins: [
-      GitChangelog({
-        // 填写在此处填写您的仓库链接
-        repoURL: () => "https://github.com/ikamusume7/MyNotes",
-      }),
-      GitChangelogMarkdownSection(),
-      PageProperties(),
-      AutoNav({
-        // 自定义配置
-        // useArticleTitle: true,
-      }),
-      UnoCSS(),
-    ],
-    optimizeDeps: {
-      exclude: ["@nolebase/vitepress-plugin-enhanced-readabilities/client"],
-    },
-    ssr: {
-      noExternal: [
-        // 如果还有别的依赖需要添加的话，并排填写和配置到这里即可
-        "@nolebase/vitepress-plugin-enhanced-readabilities",
-        "@nolebase/vitepress-plugin-highlight-targeted-heading",
-        "@nolebase/vitepress-plugin-inline-link-preview",
-        "@nolebase/ui",
-      ],
-    },
-  },
+  markdown: markdown,
+  vite: vite,
 });

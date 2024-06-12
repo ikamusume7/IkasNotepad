@@ -28,7 +28,6 @@
     "vite-plugin-vitepress-auto-nav": "^2.3.2",
     "vitepress": "^1.2.3",
     "vitepress-markdown-timeline": "^1.2.1",
-    "vitepress-plugin-auto-nav-sidebar": "^1.1.0",
     "vitepress-plugin-codeblocks-fold": "^1.2.28",
     "vitepress-plugin-sandpack": "^1.1.4",
     "vitepress-plugin-tabs": "^0.5.0",
