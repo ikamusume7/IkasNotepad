@@ -9,31 +9,31 @@
 
 ### 双向链接
 
-地址: [双向链接](https://nolebase-integrations.ayaka.io/pages/zh-CN/integrations/markdown-it-bi-directional-links/)
+地址: [bi-directional-links](https://nolebase-integrations.ayaka.io/pages/zh-CN/integrations/markdown-it-bi-directional-links/)
 
 ### 阅读增强
 
-地址: [阅读增强](https://nolebase-integrations.ayaka.io/pages/zh-CN/integrations/vitepress-plugin-enhanced-readabilities/)
+地址: [enhanced-readabilities](https://nolebase-integrations.ayaka.io/pages/zh-CN/integrations/vitepress-plugin-enhanced-readabilities/)
 
 ### 行内链接预览
 
-地址: [行内链接预览](https://nolebase-integrations.ayaka.io/pages/zh-CN/integrations/vitepress-plugin-inline-link-preview/)
+地址: [inline-link-preview](https://nolebase-integrations.ayaka.io/pages/zh-CN/integrations/vitepress-plugin-inline-link-preview/)
 
 ### 闪烁高亮当前的目标标题
 
-地址: [闪烁高亮当前的目标标题](https://nolebase-integrations.ayaka.io/pages/zh-CN/integrations/vitepress-plugin-highlight-targeted-heading/)
+地址: [highlight-targeted-heading](https://nolebase-integrations.ayaka.io/pages/zh-CN/integrations/vitepress-plugin-highlight-targeted-heading/)
 
 ### 基于 Git 的页面历史
 
-地址: [基于 Git 的页面历史](https://nolebase-integrations.ayaka.io/pages/zh-CN/integrations/vitepress-plugin-git-changelog/)
+地址: [git-changelog](https://nolebase-integrations.ayaka.io/pages/zh-CN/integrations/vitepress-plugin-git-changelog/)
 
 ## markdown 时间线
 
-地址: [markdown 时间线](https://www.npmjs.com/package/vitepress-markdown-timeline)
+地址: [markdown-timeline](https://www.npmjs.com/package/vitepress-markdown-timeline)
 
 ## 代码块折叠
 
-地址: [代码块折叠](https://github.com/T-miracle/vitepress-plugin-codeblocks-fold/tree/main)
+地址: [codeblocks](https://github.com/T-miracle/vitepress-plugin-codeblocks-fold/tree/main)
 
 ## sandpack
 
@@ -47,18 +47,21 @@
 
 地址: [shikijs-twoslash](https://www.npmjs.com/package/@shikijs/vitepress-twoslash)
 
-## aplayer & meting
+## 音乐播放器
 
 地址:
 
-## giscus/vue
+- [aplayer](https://github.com/DIYgod/APlayer)
+- [meting](https://github.com/metowolf/MetingJS)
 
-地址:
+## 评论区
 
-## medium-zoom
+地址: [giscus](https://giscus.app/zh-CN)
 
-地址:
+## 图片放大器
+
+地址: [medium-zoom](https://github.com/francoischalifour/medium-zoom)
 
 ## 滚动条
 
-地址: [滚动条](https://github.com/KingSora/OverlayScrollbars/tree/master)
+地址: [OverlayScrollbars](https://github.com/KingSora/OverlayScrollbars/tree/master)
