@@ -19,6 +19,17 @@
     <template #nav-screen-content-after>
       <NolebaseEnhancedReadabilitiesScreenMenu />
     </template>
+    <template #doc-footer-before>
+      <license
+        :title="title"
+        :url="path"
+        author="伊卡"
+        createTime=""
+        updateTime=""
+        license="CC BY 4.0"
+        licenseUrl="https://creativecommons.org/licenses/by/4.0/"
+      />
+    </template>
     <template #doc-after>
       <ClientOnly>
         <div :key="title" class="giscus">
@@ -45,7 +56,7 @@
 
 <script setup lang="ts">
 import DefaultTheme from "vitepress/theme-without-fonts";
-import { useData } from "vitepress";
+import { useData, useRoute } from "vitepress";
 import { nextTick, onMounted, provide } from "vue";
 
 import {
@@ -56,6 +67,7 @@ import {
 import { NolebaseHighlightTargetedHeading } from "@nolebase/vitepress-plugin-highlight-targeted-heading/client";
 
 import Giscus from "@giscus/vue";
+import License from "./components/License.vue";
 
 // 确保 Meting.js 只初始化一次
 // onMounted(() => {
@@ -65,7 +77,8 @@ import Giscus from "@giscus/vue";
 // });
 
 const { Layout } = DefaultTheme;
-const { title, isDark } = useData();
+const { title, isDark, url } = useData();
+const { path } = useRoute();
 
 const enableTransitions = () =>
   "startViewTransition" in document &&

@@ -13,7 +13,11 @@ export const vite: UserConfig["vite"] = {
       // 填写在此处填写您的仓库链接
       repoURL: () => "https://github.com/ikamusume7/MyNotes",
     }),
-    GitChangelogMarkdownSection(),
+    GitChangelogMarkdownSection({
+      sections: {
+        disableContributors: true,
+      },
+    }),
     PageProperties(),
     UnoCSS(),
   ],

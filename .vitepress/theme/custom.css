@@ -142,6 +142,11 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+@font-face {
+  font-family: "Black Rose";
+  src: url("../../pages/public/fonts/文道黑玫瑰.woff2") format("woff2");
+}
+
 :root {
   --vp-c-brand-1: #49a1d4;
 

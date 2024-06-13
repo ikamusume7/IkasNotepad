@@ -25,7 +25,36 @@ export default defineConfig({
         src: "https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js",
       },
     ],
+    [
+      "link",
+      {
+        rel: "preload",
+        href: "/fonts/文道黑玫瑰.woff2",
+        as: "font",
+        type: "font/woff2",
+        crossOrigin: "anonymous",
+      },
+    ],
   ],
+  transformHead: ({ assets }) => {
+    const myFontFile = assets.find((file) =>
+      /.*文道黑玫瑰\..*\.woff2/.test(file)
+    );
+    if (myFontFile) {
+      return [
+        [
+          "link",
+          {
+            rel: "preload",
+            href: myFontFile,
+            as: "font",
+            type: "font/woff2",
+            crossOrigin: "anonymous",
+          },
+        ],
+      ];
+    }
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: {
@@ -41,7 +70,7 @@ export default defineConfig({
     ],
     footer: {
       message:
-        'This site is licensed under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>. Favicon by <a href="https://icons8.com" target="_blank">Icons8</a>.',
+        'Favicon by <a href="https://icons8.com" target="_blank">Icons8</a>.',
       copyright: "Copyright © 2024-present Ika",
     },
     editLink: {
