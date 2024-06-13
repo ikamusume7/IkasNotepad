@@ -143,8 +143,8 @@
 }
 
 @font-face {
-  font-family: "Black Rose";
-  src: url("../../pages/public/fonts/文道黑玫瑰.woff2") format("woff2");
+  font-family: "blackrose";
+  src: url("../../pages/public/fonts/blackrose.woff2") format("woff2");
 }
 
 :root {
@@ -242,6 +242,12 @@
 
 .custom-block.info code {
   color: #0faa64;
+}
+
+a.title {
+  font-family: "blackrose";
+  font-size: 3.5rem;
+  font-weight: 400;
 }
 
 .aplayer {

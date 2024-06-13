@@ -29,16 +29,28 @@ export default defineConfig({
       "link",
       {
         rel: "preload",
-        href: "/fonts/文道黑玫瑰.woff2",
+        href: "/fonts/blackrose.woff2",
         as: "font",
         type: "font/woff2",
-        crossOrigin: "anonymous",
+        crossOrigin: "",
+      },
+    ],
+    ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
+    [
+      "link",
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
+    ],
+    [
+      "link",
+      {
+        href: "https://fonts.googleapis.com/css2?family=Roboto&display=swap",
+        rel: "stylesheet",
       },
     ],
   ],
   transformHead: ({ assets }) => {
     const myFontFile = assets.find((file) =>
-      /.*文道黑玫瑰\..*\.woff2/.test(file)
+      /.*blackrose\..*\.woff2/.test(file)
     );
     if (myFontFile) {
       return [

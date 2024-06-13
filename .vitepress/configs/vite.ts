@@ -4,7 +4,10 @@ import {
   GitChangelog,
   GitChangelogMarkdownSection,
 } from "@nolebase/vitepress-plugin-git-changelog/vite";
-import { PageProperties } from "@nolebase/vitepress-plugin-page-properties/vite";
+import {
+  PageProperties,
+  PagePropertiesMarkdownSection,
+} from "@nolebase/vitepress-plugin-page-properties/vite";
 import UnoCSS from "unocss/vite";
 
 export const vite: UserConfig["vite"] = {
@@ -19,10 +22,14 @@ export const vite: UserConfig["vite"] = {
       },
     }),
     PageProperties(),
+    PagePropertiesMarkdownSection(),
     UnoCSS(),
   ],
   optimizeDeps: {
-    exclude: ["@nolebase/vitepress-plugin-enhanced-readabilities/client"],
+    exclude: [
+      "@nolebase/vitepress-plugin-enhanced-readabilities/client",
+      "@nolebase/vitepress-plugin-page-properties/client",
+    ],
   },
   ssr: {
     noExternal: [

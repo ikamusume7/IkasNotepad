@@ -2,7 +2,7 @@
 import { h, onMounted, watch, nextTick } from "vue";
 import type { Theme } from "vitepress";
 import { useData, useRoute } from "vitepress";
-import DefaultTheme from "vitepress/theme-without-fonts";
+import DefaultTheme from "vitepress/theme";
 
 import "@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css";
 import "@nolebase/vitepress-plugin-inline-link-preview/client/style.css";
@@ -36,6 +36,7 @@ import { NolebaseGitChangelogPlugin } from "@nolebase/vitepress-plugin-git-chang
 import type { Options } from "@nolebase/vitepress-plugin-enhanced-readabilities/client";
 import { InjectionKey as readabilityKey } from "@nolebase/vitepress-plugin-enhanced-readabilities/client";
 import { InjectionKey as changelogKey } from "@nolebase/vitepress-plugin-git-changelog/client";
+import { NolebasePagePropertiesEditor } from "@nolebase/vitepress-plugin-page-properties/client";
 
 import mediumZoom from "medium-zoom";
 
@@ -48,6 +49,7 @@ export default {
     enhanceAppWithTabs(app);
     app.component("Sandbox", Sandbox);
     app.use(NolebaseGitChangelogPlugin);
+    app.component("NolebasePagePropertiesEditor", NolebasePagePropertiesEditor);
 
     app.provide(readabilityKey, {
       layoutSwitch: {
