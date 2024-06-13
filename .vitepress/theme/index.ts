@@ -36,7 +36,10 @@ import { NolebaseGitChangelogPlugin } from "@nolebase/vitepress-plugin-git-chang
 import type { Options } from "@nolebase/vitepress-plugin-enhanced-readabilities/client";
 import { InjectionKey as readabilityKey } from "@nolebase/vitepress-plugin-enhanced-readabilities/client";
 import { InjectionKey as changelogKey } from "@nolebase/vitepress-plugin-git-changelog/client";
-import { NolebasePagePropertiesEditor } from "@nolebase/vitepress-plugin-page-properties/client";
+import {
+  NolebasePagePropertiesEditor,
+  InjectionKey as propertiesKey,
+} from "@nolebase/vitepress-plugin-page-properties/client";
 
 import mediumZoom from "medium-zoom";
 
@@ -65,6 +68,19 @@ export default {
           links: [{ type: "github", link: "https://github.com/ikamusume7" }],
         },
       ],
+    });
+    app.provide(propertiesKey, {
+      properties: {
+        "zh-CN": [
+          {
+            key: "createAt",
+            type: "datetime",
+            title: "创建时间",
+            formatAsFrom: true,
+            dateFnsLocaleName: "zhCN",
+          },
+        ],
+      },
     });
   },
   setup() {

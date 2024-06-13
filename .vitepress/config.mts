@@ -67,6 +67,12 @@ export default defineConfig({
       ];
     }
   },
+  locales: {
+    root: {
+      label: "Chinese",
+      lang: "zh-CN",
+    },
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: {
