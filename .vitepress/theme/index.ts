@@ -79,6 +79,15 @@ export default {
             formatAsFrom: true,
             dateFnsLocaleName: "zhCN",
           },
+          {
+            key: "readingTime",
+            type: "dynamic",
+            title: "阅读时间",
+            options: {
+              type: "readingTime",
+              dateFnsLocaleName: "zhCN",
+            },
+          },
         ],
       },
     });

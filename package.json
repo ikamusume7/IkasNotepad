@@ -13,6 +13,7 @@
   "description": "",
   "devDependencies": {
     "@giscus/vue": "^3.0.0",
+    "@iconify-json/icon-park-outline": "^1.1.15",
     "@nolebase/markdown-it-bi-directional-links": "^2.1.1",
     "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.1.1",
     "@nolebase/vitepress-plugin-git-changelog": "^2.1.1",
@@ -20,6 +21,7 @@
     "@nolebase/vitepress-plugin-inline-link-preview": "^2.1.1",
     "@nolebase/vitepress-plugin-page-properties": "^2.1.1",
     "@shikijs/vitepress-twoslash": "^1.6.3",
+    "@unocss/preset-icons": "^0.61.0",
     "aplayer": "^1.10.1",
     "markdown-it-container": "^4.0.0",
     "medium-zoom": "^1.1.0",

@@ -26,10 +26,7 @@ export const vite: UserConfig["vite"] = {
     UnoCSS(),
   ],
   optimizeDeps: {
-    exclude: [
-      "@nolebase/vitepress-plugin-enhanced-readabilities/client",
-      "@nolebase/vitepress-plugin-page-properties/client",
-    ],
+    exclude: ["@nolebase/vitepress-plugin-enhanced-readabilities/client"],
   },
   ssr: {
     noExternal: [
