@@ -43,6 +43,8 @@ import {
 
 import mediumZoom from "medium-zoom";
 
+import { useMediaQuery } from "@vueuse/core";
+
 export default {
   extends: DefaultTheme,
   Layout: Layout,
@@ -99,9 +101,12 @@ export default {
     };
     onMounted(() => {
       initZoom();
-      OverlayScrollbars(document.body, {
-        // scrollbars: { theme: "os-theme-dark" },
-      });
+      const isLessThanMd = useMediaQuery("(max-width: 767px)");
+      if (!isLessThanMd.value) {
+        OverlayScrollbars(document.body, {
+          // scrollbars: { theme: "os-theme-dark" },
+        });
+      }
 
       // get frontmatter and route
       const { frontmatter } = useData();
