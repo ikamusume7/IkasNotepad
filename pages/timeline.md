@@ -2,6 +2,13 @@
 titleTemplate: "日志 - :title"
 ---
 
+::: timeline 2024-07-01
+
+- 新增
+  - [[chat/life/曾经买过的一些电子产品]] <Badge type="warning" text="未完成" />
+
+:::
+
 ::: timeline 2024-06-17
 
 - 更新:
