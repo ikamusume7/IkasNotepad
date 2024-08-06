@@ -21,6 +21,16 @@ export const sidebar: DefaultTheme.Sidebar = {
       link: "/gamedev/",
     },
   ],
+  "/art/": [
+    {
+      text: "前言",
+      link: "/art/",
+    },
+    {
+      text: "人物姿势的定理",
+      items: searchFiles("/art/人物姿势的定理"),
+    },
+  ],
   "/chat/": [
     {
       text: "前言",
@@ -52,6 +62,9 @@ function searchFiles(searchPath: string): DefaultTheme.SidebarItem[] {
   const files = fs.readdirSync(absolutePath);
   const items: DefaultTheme.SidebarItem[] = [];
   files.forEach((file: string) => {
+    if (file === "index.md" || file.endsWith(".md") === false) {
+      return;
+    }
     const fileContent = fs.readFileSync(absolutePath + "/" + file, "utf-8");
     const { data } = matter(fileContent);
     const index = data.index || 0;

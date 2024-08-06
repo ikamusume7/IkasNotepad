@@ -40,6 +40,13 @@ features:
     link: gamedev/
     linkText: 前往
   - icon:
+      light: icons/ic--outline-draw-light.svg
+      dark: icons/ic--outline-draw-dark.svg
+    title: 绘画
+    details: 绘画相关
+    link: art/
+    linkText: 前往
+  - icon:
       light: icons\ic--outline-chat-light.svg
       dark: icons\ic--outline-chat-dark.svg
     title: 杂谈

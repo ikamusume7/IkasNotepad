@@ -18,6 +18,10 @@ export const nav: DefaultTheme.Config["nav"] = [
     link: "/gamedev/",
   },
   {
+    text: "绘画",
+    link: "/art/",
+  },
+  {
     text: "杂物",
     activeMatch: "^/misc/",
     items: [
