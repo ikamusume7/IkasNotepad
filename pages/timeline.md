@@ -2,6 +2,20 @@
 titleTemplate: "日志 - :title"
 ---
 
+::: timeline 2024-08-09
+
+- 更新:
+  - [[chat/game/黑神话-悟空]] <Badge type="tip" text="追加" />
+
+:::
+
+::: timeline 2024-08-06
+
+- 新增
+  - [[art/人物姿势的定理/人物姿势的定理 第1章]] <Badge type="warning" text="未完成" />
+
+:::
+
 ::: timeline 2024-07-01
 
 - 新增
