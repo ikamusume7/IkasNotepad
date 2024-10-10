@@ -25,14 +25,6 @@ hero:
 
 features:
   - icon:
-      light: icons/ic--outline-web-light.svg
-      dark: icons/ic--outline-web-dark.svg
-      alt: 前端笔记
-    title: 前端笔记
-    details: 关于前端的知识
-    link: frontend/
-    linkText: 前往
-  - icon:
       light: icons/ic--outline-videogame-asset-light.svg
       dark: icons/ic--outline-videogame-asset-dark.svg
     title: 游戏开发
@@ -45,12 +37,5 @@ features:
     title: 绘画
     details: 绘画相关
     link: art/
-    linkText: 前往
-  - icon:
-      light: icons\ic--outline-chat-light.svg
-      dark: icons\ic--outline-chat-dark.svg
-    title: 杂谈
-    details: 扯东扯西
-    link: chat/
     linkText: 前往
 ---

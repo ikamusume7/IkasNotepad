@@ -3,17 +3,6 @@ import type { DefaultTheme } from "vitepress";
 export const nav: DefaultTheme.Config["nav"] = [
   { text: "日志", link: "timeline" },
   {
-    text: "前端",
-    activeMatch: "^/frontend/",
-    items: [
-      {
-        text: "Vue",
-        link: "/frontend/vue/基础",
-        activeMatch: "^/frontend/vue/",
-      },
-    ],
-  },
-  {
     text: "游戏开发",
     link: "/gamedev/",
   },
@@ -36,10 +25,6 @@ export const nav: DefaultTheme.Config["nav"] = [
         activeMatch: "^/misc/bugs/",
       },
     ],
-  },
-  {
-    text: "杂谈",
-    link: "/chat/",
   },
   { text: "关于", link: "/about" },
 ];

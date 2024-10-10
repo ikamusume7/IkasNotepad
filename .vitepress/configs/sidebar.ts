@@ -5,44 +5,24 @@ import process from "process";
 import matter from "gray-matter";
 
 export const sidebar: DefaultTheme.Sidebar = {
-  "/frontend/": [
-    {
-      text: "前言",
-      link: "/frontend/",
-    },
-    {
-      text: "Vue",
-      items: searchFiles("/frontend/vue"),
-    },
-  ],
   "/gamedev/": [
     {
       text: "前言",
       link: "/gamedev/",
+    },
+    {
+      text: "Unity",
+      items: searchFiles("/gamedev/unity"),
+    },
+    {
+      text: "Murder",
+      items: searchFiles("/gamedev/murder"),
     },
   ],
   "/art/": [
     {
       text: "前言",
       link: "/art/",
-    },
-    {
-      text: "人物姿势的定理",
-      items: searchFiles("/art/人物姿势的定理"),
-    },
-  ],
-  "/chat/": [
-    {
-      text: "前言",
-      link: "/chat/",
-    },
-    {
-      text: "游戏感想",
-      items: searchFiles("/chat/game"),
-    },
-    {
-      text: "生活",
-      items: searchFiles("/chat/life"),
     },
   ],
   "/misc/": [
